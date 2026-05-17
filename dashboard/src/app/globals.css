@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --background: #060d1a;
+  --foreground: #f0e6c8;
+  --gold:        #d4a017;
+  --gold-light:  #f4e08a;
+  --navy:        #060d1a;
+  --navy-card:   #0a1628;
+  --navy-border: #162844;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--navy);
+  color: var(--foreground);
+  font-family: "Inter", system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0a1628; }
+::-webkit-scrollbar-thumb { background: #d4a017; border-radius: 3px; }
+
+/* Gold gradient text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #d4a017 0%, #f4e08a 50%, #d4a017 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card glow on hover */
+.card-glow:hover {
+  box-shadow: 0 0 24px rgba(212, 160, 23, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Pulse animation for live indicator */
+@keyframes pulse-gold {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.pulse-gold { animation: pulse-gold 2s ease-in-out infinite; }
+
+/* Bonding curve fill animation */
+@keyframes fill-bar {
+  from { width: 0; }
+}
+.fill-bar { animation: fill-bar 1.2s ease-out; }

@@ -6,6 +6,7 @@ import AddScholarship from './pages/AddScholarship';
 import ScholarshipDetail from './pages/ScholarshipDetail';
 import OpportunityFinder from './pages/OpportunityFinder';
 import SprintBoard from './pages/SprintBoard';
+import FundingPipeline from './pages/FundingPipeline';
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -40,6 +41,10 @@ export default function App() {
         <Route
           path="/sprints"
           element={<Layout><SprintBoard /></Layout>}
+        />
+        <Route
+          path="/pipeline"
+          element={<Layout><FundingPipeline /></Layout>}
         />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

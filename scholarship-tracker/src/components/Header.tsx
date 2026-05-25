@@ -5,6 +5,7 @@ import { Menu, X, GraduationCap } from 'lucide-react';
 const NAV = [
   { to: '/dashboard', label: 'My Scholarships' },
   { to: '/find',      label: 'Find Opportunities' },
+  { to: '/pipeline',  label: 'Funding Pipeline' },
   { to: '/sprints',   label: 'Sprint Board' },
 ];
 

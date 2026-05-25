@@ -4,6 +4,7 @@ import {
   ArrowRight, Zap, Target, BookOpen
 } from 'lucide-react';
 
+
 const FEATURES = [
   {
     icon: <Search className="w-6 h-6 text-blue-500" />,
@@ -34,6 +35,11 @@ const FEATURES = [
     icon: <BookOpen className="w-6 h-6 text-indigo-500" />,
     title: 'Save for Later',
     desc: 'Bookmark opportunities and return when you\'re ready—nothing falls through the cracks.',
+  },
+  {
+    icon: <Target className="w-6 h-6 text-purple-500" />,
+    title: 'Funding Pipeline',
+    desc: 'Discover niche, underused sources—local foundations, civic clubs, alumni networks—ranked by urgency, fit, and effort.',
   },
 ];
 
